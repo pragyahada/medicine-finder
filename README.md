@@ -75,6 +75,7 @@ File Uploads: Werkzeug
 Session Management: Flask Sessions
 
 📁 Project Structure
+```
 project/
 │
 ├── app.py
@@ -85,7 +86,7 @@ project/
 │   ├── *.html
 │
 └── README.md
-
+```
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
 ```
