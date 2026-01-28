@@ -1,0 +1,81 @@
+{% extends 'h3.html' %}
+{% block m1 %}
+
+<link href="../static/css/welcome.css" type="text/css" rel="stylesheet"/>
+
+<!-- 🔍 Search Bar -->
+<div class="search-section">
+    <form method="post" action="/">
+        <label for="Txt1" class="visually-hidden">Medicine</label>
+        {% if data or msg %}
+            <input value="{{ mname }}" type="text" id="Txt1" name="T1" placeholder="Enter medicine name.." required/>
+        {% else %}
+            <input type="text" id="Txt2" name="T1" placeholder="Enter medicine name.." required/>
+        {% endif %}
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+<!-- 💊 Search Results Section -->
+{% if data %}
+<div class="result-container">
+    <table class="results-table">
+        <thead>
+            <tr>
+                <th>MEDICAL DETAILS</th>
+                <th>MEDICINE DETAILS</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for d in data %}
+        <tr>
+            <td>
+                <p><b>Medical Name:</b> {{ d[0] }}</p>
+                <p>
+                    <b>Address:</b> {{ d[3] }}<br>
+                    <b>Contact:</b> {{ d[4] }}<br>
+                    <b>Licence No:</b> {{ d[2] }}<br>
+                    <b>Email:</b> {{ d[5] }}
+                </p>
+            </td>
+            <td>
+                <p><b>Medicine Name:</b> {{ d[6] }}</p>
+                <p>
+                    <b>Type:</b> {{ d[7] }}<br>
+                    <b>Company:</b> {{ d[8] }}<br>
+                    <b>Unit Price:</b> ₹{{ d[9] }}<br>
+                    <b>Description:</b> {{ d[10] }}
+                </p>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<!-- ❗ Message if not found -->
+{% elif msg %}
+<div class="message">
+    <h2>{{ msg }}</h2>
+</div>
+{% endif %}
+
+<!-- 🏠 Welcome Section (Show only when no search is done) -->
+{% if not data and not msg %}
+<div class="welcome-container">
+    <h1 class="welcome-title">
+        Welcome TO
+        <span class="curenet-word">
+            <span>C</span><span>u</span><span>r</span><span>e</span><span>n</span><span>e</span><span>t</span>
+        </span>
+    </h1>
+
+    <p class="welcome-text">
+        Here you can search for nearby medical stores, pharmacies.
+        We provide detailed information about available medicines, healthcare centers,
+        and emergency contact numbers — all managed and updated regularly.
+    </p>
+</div>
+{% endif %}
+
+{% endblock %}

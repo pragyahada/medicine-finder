@@ -1,0 +1,34 @@
+{% extends 'm2.html' %}
+
+{% block m1 %}
+<link href="../static/css/medical_home.css" type="text/css" rel="stylesheet"/>
+
+<h1>Medical block</h1>
+
+{% if data %}
+<div class="medical-container">
+    {% if photo=='no' %}
+        <p><a href="medicalphoto">Upload photo</a></p>
+    {% else %}
+        <img src="../static/photos/{{ photo }}" width="100" height="100"/>
+        <p><a href="change_medicalphoto">Change Photo</a></p>
+    {% endif %}
+
+    <h3>medical_name: {{data[0]}}</h3>
+    <p>
+        owner_name: {{data[1]}} <br/>
+        address: {{data[2]}} <br/>
+        contact: {{data[3]}} <br/>
+        licence_no: {{data[4]}} <br/>
+        email: {{data[5]}}
+    </p>
+    <p><a href="medical_profile">Edit</a></p>
+</div>
+
+{% elif msg %}
+<div class="medical-container">
+    <h3>{{msg}}</h3>
+</div>
+{% endif %}
+
+{% endblock %}

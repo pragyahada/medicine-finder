@@ -1,0 +1,23 @@
+{% extends 'edit_medical_temp.html' %}
+{% block m1 %}
+<link href="../static/css/edit_medical.css" type="text/css" rel="stylesheet"/>
+
+<h1 class="page-heading">Edit and Save</h1>
+
+{% if project %}
+<div class="form-back-container">
+    <form method="post" action="edit_medical1">
+        <p>medical_name:<input type="text" value="{{project[0]}}" name="T1"></p>
+        <p>owner_name:<input type="text" value="{{project[1]}}" name="T2"></p>
+        <p>address:<input type="text" value="{{project[2]}}" name="T3"></p>
+        <p>contact:<input type="text" value="{{project[3]}}" name="T4"></p>
+        <p>licence_no:<input type="text" value="{{project[4]}}" name="T5"></p>
+        <p>email:<input type="text" value="{{project[5]}}" name="T6"></p>
+
+        <button type="submit">Save Changes</button>
+    </form>
+
+    <h3><a href="show_medical">Back</a></h3>
+</div>
+{% endif %}
+{% endblock %}

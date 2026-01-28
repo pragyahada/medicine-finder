@@ -1,0 +1,134 @@
+{% extends 'medicine_reg_temp.html' %}
+{% block m1 %}
+<link href="../static/css/medicine_reg.css" type="text/css" rel="stylesheet"/>
+<h1>MEDICINE REGISTRATION</h1>
+<form method="post" action="medicine_reg" onsubmit="return A()">
+    <p>
+        medicine_name:
+        <input type="text" name="T1" id="txt1"><span id="sp1"></span>
+    </p>
+    <p>
+        medicine_type:
+        <input type="text" name="T2" id="txt2"><span id="sp2"></span>
+    </p>
+    <p>
+        company_name:
+        <input type="text" name="T3" id="txt3"><span id="sp3"></span>
+    </p>
+    <p>
+        unit_price:
+        <input type="text" name="T4" id="txt4"><span id="sp4"></span>
+    </p>
+    <p>
+        description:
+        <input type="text" name="T5" id="txt5"><span id="sp5"></span>
+        <p>
+        <p>
+    med_id:
+    <input type="text" name="T6" id="txt6"><span id="sp6"></span>
+</p>
+
+    <p>
+        <input type="submit" name="B1" id="Btn1" value="Register">
+    </p>
+</form>
+<script>
+    function A() {
+        var t1 = document.getElementById("txt1");
+        var t2 = document.getElementById("txt2");
+        var t3 = document.getElementById("txt3");
+        var t4 = document.getElementById("txt4");
+        var t5 = document.getElementById("txt5");
+        var t6 = document.getElementById("txt6");
+
+        var e1 = document.getElementById("sp1");
+        var e2 = document.getElementById("sp2");
+        var e3 = document.getElementById("sp3");
+        var e4 = document.getElementById("sp4");
+        var e5 = document.getElementById("sp5");
+        var e6 = document.getElementById("sp6");
+
+        var v1 = t1.value.trim();
+        var v2 = t2.value.trim();
+        var v3 = t3.value.trim();
+        var v4 = t4.value.trim();
+        var v5 = t5.value.trim();
+        var v6 = t6.value.trim();
+
+        e1.innerHTML = "";
+        e2.innerHTML = "";
+        e3.innerHTML = "";
+        e4.innerHTML = "";
+        e5.innerHTML = "";
+        e6.innerHTML = "";
+
+        if (v1 == "") {
+            e1.innerHTML = "Enter Medicine Name";
+            t1.focus();
+            return false;
+        } else if (!check_alpha(v1)) {
+            e1.innerHTML = "Only Alphabets Allowed";
+            t1.focus();
+            return false;
+        } else if (v2 == "") {
+            e2.innerHTML = "Enter Medicine Type";
+            t2.focus();
+            return false;
+        } else if (!check_alpha(v2)) {
+            e2.innerHTML = "Only Alphabets Allowed";
+            t2.focus();
+            return false;
+        } else if (v3 == "") {
+            e3.innerHTML = "Enter Company Name";
+            t3.focus();
+            return false;
+        } else if (!check_alpha(v3)) {
+            e3.innerHTML = "Only Alphabets Allowed";
+            t3.focus();
+            return false;
+        } else if (v4 == "") {
+            e4.innerHTML = "Enter Unit Price";
+            t4.focus();
+            return false;
+        } else if (!check_number(v4)) {
+            e4.innerHTML = "Only Numeric Value Allowed";
+            t4.focus();
+            return false;
+        } else if (v5 == "") {
+            e5.innerHTML = "Enter Description";
+            t5.focus();
+            return false;
+        } else if (v6 == "") {
+            e6.innerHTML = "Enter Medicine ID";
+            t6.focus();
+            return false;
+        }
+    }
+
+    function check_alpha(name) {
+        for (let i = 0; i < name.length; i++) {
+            let ch = name.charAt(i);
+            if (!((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z') || ch === ' ')) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function check_number(val) {
+        for (let i = 0; i < val.length; i++) {
+            let ch = val.charAt(i);
+            if (ch < '0' || ch > '9') {
+                return false;
+            }
+        }
+        return true;
+    }
+</script>
+
+
+<a href="medical_home">Back</a>
+{% if msg %}
+<h3>{{msg}}</h3>
+{% endif %}
+{% endblock %}

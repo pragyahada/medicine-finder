@@ -1,0 +1,24 @@
+<h1>DELETE</h1>
+<link href="../static/css/delete_medicine.css" type="text/css" rel="stylesheet"/>
+
+{% if project %}
+<div class="admin-container">
+    <h3>{{project[0]}}</h3>
+    <p>
+        medicine_name: {{project[1]}}<br/>
+        medicine_type: {{project[2]}}<br/>
+        company_name: {{project[3]}}<br/>
+        unit_price: {{project[4]}}<br/>
+        description: {{project[5]}}
+    </p>
+
+    <form onsubmit="return confirm('Are you sure to delete?')" method="post" action="delete_medicine1">
+        <input type="hidden" value="{{project[0]}}" name="D1"/>
+        <button type="submit">Delete</button>
+    </form>
+
+    <a href="show_medicine">
+        <button type="button">Continue</button>
+    </a>
+</div>
+{% endif %}

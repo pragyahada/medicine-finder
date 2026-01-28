@@ -1,0 +1,131 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin: 0 0 18px 0;
+    color: #8a56c1;
+    letter-spacing: 1px;
+}
+
+/* === Medical Form Container === */
+form {
+    width: 440px;
+    max-width: 90%;
+    margin: 0 auto 18px auto; /* reduced bottom gap */
+    padding: 18px 22px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    border: 1px solid #c8a0ff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    min-height: 360px;
+}
+
+/* === Paragraphs & Labels === */
+p {
+    color: #333;
+    font-weight: 500;
+    margin: 8px 0;
+    line-height: 1.3;
+}
+
+/* === Input Fields === */
+form input[type="text"] {
+    width: 100%;
+    padding: 7px 10px;
+    margin-top: 3px;
+    margin-bottom: 7px;
+    border-radius: 8px;
+    border: 1px solid #c8a0ff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+form input[type="text"]:focus {
+    border-color: #9c6cff;
+    box-shadow: 0 0 6px rgba(156, 108, 255, 0.4);
+    outline: none;
+}
+
+/* === Validation messages === */
+span {
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+    display: block;
+    margin-top: -4px; /* moved slightly upward */
+    margin-bottom: 3px;
+}
+
+/* === Submit Button === */
+input[type="submit"],
+#Btn1 {
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 12px;
+    border: none;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 12px auto 6px auto; /* submit ke niche thoda space */
+}
+
+input[type="submit"]:hover,
+#Btn1:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(156, 108, 255, 0.6);
+}
+
+/* === Back Button / Link === */
+a, .back-btn {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: 0.3s;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto 5px auto; /* button thoda upar (close to submit) */
+}
+
+a:hover, .back-btn:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 4px 15px rgba(156, 108, 255, 0.6);
+    color: white;
+}
+
+/* === Message / Success Styling === */
+h3 {
+    text-align: center;
+    color: #27ae60;
+    margin-top: 8px;  /* moved upward */
+    margin-bottom: 0;
+}
+
+/* === Responsive adjustments === */
+@media screen and (max-width: 500px) {
+    form {
+        width: 95%;
+        padding: 12px 14px;
+        min-height: 340px;
+    }
+    h1 {
+        margin-top: 15px;
+    }
+}

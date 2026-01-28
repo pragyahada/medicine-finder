@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<link href="../static/pulse/bootstrap.css" type="text/css" rel="stylesheet"/>
+<script src="../static/js/bootstrap.bundle.js">
+</script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="../static/images/LOGO.png" width="150px" height="40px" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item mx-4">
+          <a class="nav-link active" href="admin_home">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item dropdown mx-4">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Admin</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="admin_reg">Add</a>
+            <a class="dropdown-item" href="show_admins">Show</a>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown mx-4">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Medical</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="medical_reg">Add</a>
+            <a class="dropdown-item" href="show_medical">Manage</a>
+          </div>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link" href="logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid" style="min-height:600px;">
+
+    {% block m1 %}
+    {% endblock %}
+
+</div>
+<div class="container-fluid bg-dark" style="min-height:70px;"></div>
+
+</body>
+</html>

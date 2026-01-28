@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Untitled Document</title>
+<link href="../static/pulse/bootstrap.css" type="text/css" rel="stylesheet"/>
+<script src="../static/js/bootstrap.bundle.js">
+</script>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="medical_home"><img src="../static/images/LOGO.png" width="150px" height="40px" /></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item mx-4">
+          <a class="nav-link active" href="/">Home
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+
+        <li class="nav-item dropdown mx-4">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Medicine</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="medicine_reg">Add</a>
+            <a class="dropdown-item" href="show_medicine">Manage</a>
+          </div>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link" href="change_pass_medical">ChangePassword</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link" href="logout">Logout</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<div class="container-fluid" style="min-height:600px;">
+
+    {% block m1 %}
+    {% endblock %}
+
+</div>
+<div class="container-fluid bg-dark" style="min-height:70px;"></div>
+
+</body>
+</html>

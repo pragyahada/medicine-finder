@@ -1,0 +1,93 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin-top: 20px;   /* heading higher */
+    margin-bottom: 12px;/* space between heading & form */
+    color: #8a56c1;
+    letter-spacing: 1px;
+}
+
+/* === Medical Form Container === */
+form {
+    width: 420px;
+    max-width: 90%;
+    margin: 0 auto 25px auto;
+    padding: 8px 15px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    border: 1px solid #c8a0ff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* === Input Fields === */
+form input[type="text"] {
+    width: 100%;
+    padding: 5px 8px;
+    margin-top: 2px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    border: 1px solid #c8a0ff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+form input[type="text"]:focus {
+    border-color: #9c6cff;
+    box-shadow: 0 0 6px rgba(156,108,255,0.4);
+    outline: none;
+}
+
+/* === Paragraphs & Labels === */
+p {
+    color: #333;
+    font-weight: 500;
+    margin: 3px 0;
+    line-height: 1.3;
+}
+
+/* === Validation messages === */
+span {
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* === Submit Button === */
+input[type="submit"] {
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(156,108,255,0.6);
+}
+
+/* === Responsive adjustments === */
+@media screen and (max-width: 500px) {
+    form {
+        width: 95%;
+        padding: 6px 10px;
+    }
+    h1 {
+        margin-top: 15px;
+    }
+}

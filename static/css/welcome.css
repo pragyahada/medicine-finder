@@ -1,0 +1,236 @@
+/* === Page setup === */
+body {
+  background: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* === Search Section (Top-Right Corner) === */
+.search-section {
+  position: fixed;
+  top: 10px; /* reduced padding — search bar moves up */
+  right: 40px;
+  z-index: 1000;
+}
+
+.search-section form {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(75, 0, 130, 0.25);
+}
+
+.search-section input[type="text"] {
+  width: 220px;
+  padding: 8px 14px;
+  border: 2px solid #7b2ff7;
+  border-radius: 25px;
+  outline: none;
+  font-size: 0.95em;
+  transition: 0.3s;
+}
+
+.search-section input[type="text"]:focus {
+  border-color: #5e17eb;
+  box-shadow: 0 0 8px rgba(94, 23, 235, 0.4);
+}
+
+.search-section button {
+  background-color: #7b2ff7;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 8px 18px;
+  font-size: 0.95em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-left: 8px;
+}
+
+.search-section button:hover {
+  background-color: #5e17eb;
+}
+
+/* === Results Table Section === */
+.result-container {
+  width: 90%;
+  margin: 120px auto 50px auto;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(75, 0, 130, 0.2);
+  overflow: hidden;
+  animation: fadeInTable 1s ease-in-out forwards;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.results-table th {
+  background: #7b2ff7;
+  color: white;
+  font-size: 1.2em;
+  padding: 15px;
+  text-align: center;
+}
+
+.results-table td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+  color: #333;
+}
+
+.results-table tr:hover {
+  background: rgba(123, 47, 247, 0.08);
+}
+
+.medical-name,
+.medicine-name {
+  font-size: 1.1em;
+  color: #5e17eb;
+}
+
+.details {
+  font-size: 0.95em;
+  color: #444;
+  line-height: 1.6;
+}
+
+@keyframes fadeInTable {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Message Section (No Results Found) === */
+.message {
+  text-align: center;
+  margin-top: 100px;
+  animation: fadeInMsg 1s ease-in-out forwards;
+}
+
+.message h2 {
+  color: #5e17eb;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.7);
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 25px;
+  box-shadow: 0 3px 10px rgba(75, 0, 130, 0.2);
+}
+
+@keyframes fadeInMsg {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Welcome Section === */
+.welcome-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* === Title === */
+.welcome-title {
+  font-size: 4em;
+  font-weight: 800;
+  color: #4b0082;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* === "Curenet" Letter Animation === */
+.curenet-word span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: letterAppear 0.4s forwards;
+}
+
+.curenet-word span:nth-child(1) { animation-delay: 0.1s; }
+.curenet-word span:nth-child(2) { animation-delay: 0.3s; }
+.curenet-word span:nth-child(3) { animation-delay: 0.5s; }
+.curenet-word span:nth-child(4) { animation-delay: 0.7s; }
+.curenet-word span:nth-child(5) { animation-delay: 0.9s; }
+.curenet-word span:nth-child(6) { animation-delay: 1.1s; }
+.curenet-word span:nth-child(7) { animation-delay: 1.3s; }
+
+@keyframes letterAppear {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === Whole word glow animation === */
+.curenet-word {
+  display: inline-block;
+  animation: glow3D 3s ease-in-out infinite alternate;
+  animation-delay: 2s;
+}
+
+@keyframes glow3D {
+  0% {
+    color: #5e17eb;
+    text-shadow: 0 0 5px #b19cd9, 0 0 10px rgba(94, 23, 235, 0.5);
+    transform: scale(1) rotateX(0deg);
+  }
+  50% {
+    color: #7b2ff7;
+    text-shadow: 0 4px 15px #a084ca, 0 0 20px rgba(94, 23, 235, 0.7);
+    transform: scale(1.05) rotateX(10deg);
+  }
+  100% {
+    color: #5e17eb;
+    text-shadow: 0 0 5px #b19cd9, 0 0 10px rgba(94, 23, 235, 0.5);
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+/* === Paragraph text === */
+.welcome-text {
+  margin-top: 25px;
+  font-size: 1.2em;
+  color: #5e17eb;
+  max-width: 700px;
+  line-height: 1.6;
+  opacity: 0;
+  animation: fadeInText 1.5s ease-out forwards;
+  animation-delay: 2.5s;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

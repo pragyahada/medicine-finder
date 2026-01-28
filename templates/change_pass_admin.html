@@ -1,0 +1,36 @@
+{% extends 'change_pass_admin_temp.html' %}
+{% block m1 %}
+<link href="../static/css/change_pass_admin.css" type="text/css" rel="stylesheet"/>
+
+<!-- Page Heading -->
+<h1>Password Change</h1>
+
+<!-- Container for password form -->
+<div class="pass-container">
+    <form method="post" action="change_pass_admin">
+        <p>Old Password:
+            <input type="text" name="T1" id="Txt1">
+        </p>
+        <p>New Password:
+            <input type="text" name="T2" id="Txt2">
+        </p>
+        <p>Confirm Password:
+            <input type="text" name="T3" id="Txt3">
+        </p>
+        <p>
+            <input type="submit" name="B1" id="Btn1" value="Change">
+        </p>
+    </form>
+
+    <!-- Display message if any -->
+    {% if msg %}
+        <h3>{{msg}}</h3>
+    {% endif %}
+
+    <!-- Home button -->
+    <a href="admin_home">
+        <button>Home</button>
+    </a>
+</div>
+
+{% endblock %}

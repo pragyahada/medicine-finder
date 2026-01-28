@@ -1,0 +1,82 @@
+{% extends 'l3.html' %}
+
+{% block m1 %}
+
+<!-- Link to external CSS -->
+<link href="../static/css/login.css" type="text/css" rel="stylesheet"/>
+
+<div class="container">
+    <div class="login-box">
+        <h2>Login</h2>
+        <form method="post" action="login">
+            <p>
+                Email<br>
+                <input type="text" id="txt1" name="T1" placeholder="Enter your email">
+                <span id="sp1"></span>
+            </p>
+            <p>
+                Password<br>
+                <input type="password" id="txt2" name="T2" placeholder="Enter your password">
+                <span id="sp2"></span>
+            </p>
+            <p>
+                <button type="submit">Login</button>
+            </p>
+        </form>
+
+        {% if msg %}
+            <h3>{{msg}}</h3>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+    // Real-time email validation
+    document.getElementById("txt1").addEventListener("input", function () {
+        const email = this.value;
+        const s1 = document.getElementById("sp1");
+        const pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (email === "") {
+            s1.textContent = "Enter Email";
+        } else if (!pattern.test(email)) {
+            s1.textContent = "Enter valid Email Id";
+        } else {
+            s1.textContent = "";
+        }
+    });
+
+    // Form submission validation
+    function A() {
+        const email = document.getElementById("txt1");
+        const password = document.getElementById("txt2");
+        const s1 = document.getElementById("sp1");
+        const s2 = document.getElementById("sp2");
+
+        s1.textContent = "";
+        s2.textContent = "";
+
+        if (email.value.trim() === "") {
+            s1.textContent = "Enter Email";
+            email.focus();
+            return false;
+        }
+
+        const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!emailPattern.test(email.value)) {
+            s1.textContent = "Enter valid Email Id";
+            email.focus();
+            return false;
+        }
+
+        if (password.value.trim() === "") {
+            s2.textContent = "Enter Password";
+            password.focus();
+            return false;
+        }
+
+        return true;
+    }
+</script>
+
+{% endblock %}

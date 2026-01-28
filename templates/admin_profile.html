@@ -1,0 +1,22 @@
+{% extends 'admin_profile_temp.html' %}
+{% block m1 %}
+<link href="../static/css/admin_profile.css" type="text/css" rel="stylesheet"/>
+
+<h1>My Profile</h1>
+
+{% if data %}
+<div class="profile-container">
+    <form method="post" action="admin_profile">
+        <p>Name <input type="text" value="{{data[0]}}" name="T1" /> </p>
+        <p>Address <input type="text" value="{{data[1]}}" name="T2" /> </p>
+        <p>Contact <input type="text" value="{{data[2]}}" name="T3" /> </p>
+        <p>Email <input readonly type="text" value="{{data[3]}}" name="T4" /> </p>
+        <p><button type="submit">Save Changes</button></p>
+    </form>
+    <h2><a href="admin_home">Home</a></h2>
+</div>
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+
+{% endblock %}

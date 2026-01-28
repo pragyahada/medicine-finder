@@ -1,0 +1,83 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #8a56c1;
+}
+
+/* === Back Link === */
+a h2 {
+    text-align: center;
+    margin: 10px 0;
+    color: white;
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    padding: 8px 18px;
+    border-radius: 12px;
+    display: inline-block;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+a h2:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 4px 15px rgba(156, 108, 255, 0.6);
+}
+
+/* === Details Container === */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    color: #8a56c1;
+}
+
+/* === Individual Medicine Block === */
+h3 {
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid #c8a0ff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #4b0082;
+    margin-top: 15px;
+}
+
+p {
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 12px;
+    border: 1px solid #c8a0ff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    line-height: 1.4;
+    margin: 5px 0 15px 0;
+}
+
+/* === Form Buttons (EDIT / DELETE) === */
+form button {
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    color: white;
+    padding: 7px 18px;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 4px 15px rgba(156, 108, 255, 0.6);
+}
+
+/* === Message Styling === */

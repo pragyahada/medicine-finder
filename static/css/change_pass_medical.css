@@ -1,0 +1,102 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #f0f4f9, #e9d9ff);
+    margin: 0;
+    height: 100vh;
+    position: relative;
+}
+
+/* === Heading === */
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #8a56c1;
+    text-transform: capitalize;
+}
+
+/* === Container (no animation now) === */
+.pass-container {
+    width: 450px;
+    max-width: 90%;
+    padding: 25px 30px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c8a0ff;
+    text-align: center;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* === Input fields === */
+.pass-container p {
+    margin: 12px 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.pass-container input[type="password"] {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 1px solid #c8a0ff;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.pass-container input[type="password"]:focus {
+    border-color: #9c6cff;
+    box-shadow: 0 0 10px rgba(156, 108, 255, 0.4);
+    outline: none;
+}
+
+/* === Buttons === */
+.pass-container input[type="submit"] {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    padding: 10px 25px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pass-container input[type="submit"]:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(156, 108, 255, 0.6);
+}
+
+/* === Home + Back buttons === */
+.animated-btn {
+    display: inline-block;
+    margin: 10px 8px;
+    padding: 10px 25px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #8a56c1, #b388ff);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(138, 86, 193, 0.3);
+}
+
+.animated-btn:hover {
+    background: linear-gradient(135deg, #6f38c5, #9c6cff);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 25px rgba(138, 86, 193, 0.6);
+}
+
+/* === Messages === */
+.pass-container h3 {
+    color: #555;
+    margin-top: 15px;
+    text-align: center;
+}

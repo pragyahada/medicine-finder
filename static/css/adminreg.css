@@ -1,0 +1,99 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9; /* soft medical-themed background */
+    margin: 0;
+    padding: 0;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin-top: 30px; /* heading slightly higher */
+    margin-bottom: 15px; /* small space between heading and container */
+    color: #8a56c1; /* soft purple */
+}
+
+/* === Admin Container Box === */
+.admin-container {
+    width: 450px;
+    max-width: 90%;
+    height: auto; /* adjusts to content */
+    padding: 10px 15px; /* reduced padding for smaller height */
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* lighter shadow */
+    text-align: left;
+    border: 1px solid #c8a0ff;
+    margin: 0 auto 20px auto;
+}
+
+/* === Input Fields === */
+.admin-container input[type="text"] {
+    width: 100%;
+    padding: 5px 8px; /* smaller padding */
+    margin-top: 3px;
+    margin-bottom: 8px; /* reduced margin */
+    border-radius: 6px;
+    border: 1px solid #c8a0ff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.admin-container input[type="text"]:focus {
+    border-color: #9c6cff;
+    box-shadow: 0 0 6px rgba(156, 108, 255, 0.4);
+    outline: none;
+}
+
+.admin-container input[readonly] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* === Buttons & Links === */
+.admin-container input[type="submit"],
+.admin-container button,
+.admin-container a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    padding: 7px 18px; /* slightly smaller */
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.admin-container input[type="submit"]:hover,
+.admin-container button:hover,
+.admin-container a:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(156, 108, 255, 0.6);
+}
+
+/* === Validation messages === */
+.admin-container span {
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* === Paragraphs & Labels inside container === */
+.admin-container p {
+    color: #333;
+    line-height: 1.4;
+    margin: 5px 0;
+}
+
+/* === Responsive adjustments === */
+@media screen and (max-width: 500px) {
+    .admin-container {
+        padding: 10px 10px;
+    }
+}

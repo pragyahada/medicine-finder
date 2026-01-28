@@ -1,0 +1,53 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9; /* soft page background */
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #8a56c1; /* soft purple heading */
+}
+
+/* Medical info container */
+.medical-container {
+    width: 450px;
+    margin: 0 auto 50px auto;
+    padding: 30px 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff); /* soft purple-white gradient */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #c8a0ff; /* subtle purple border */
+}
+
+/* Text inside container */
+.medical-container h3,
+.medical-container p {
+    color: #333;
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Links styled as buttons */
+.medical-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #b388ff; /* light purple button */
+    padding: 8px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+}
+
+/* Medical photo styling */
+.medical-container img {
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    border: 2px solid #b388ff; /* border matches button color */
+}

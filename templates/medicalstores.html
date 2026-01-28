@@ -1,0 +1,32 @@
+{% extends 'medical_stores_templ.html' %}
+{% block m1 %}
+<link href="../static/css/medical_stores.css" type="text/css" rel="stylesheet"/>
+<h1>Medical Stores</h1>
+
+{% if project %}
+<table width="90%" border="2" cellpadding="8" cellspacing="0" align="center">
+
+    <tr>
+        <th>Medical Name</th>
+        <th>Owner Name</th>
+        <th>Address</th>
+        <th>Licence No</th>
+        <th>Contact</th>
+        <th>Email</th>
+    </tr>
+
+    {% for d in project %}
+    <tr>
+        <td>{{ d[0] }}</td>
+        <td>{{ d[1] }}</td>
+        <td>{{ d[2] }}</td>
+        <td>{{ d[4] }}</td>
+        <td>{{ d[3] }}</td>
+        <td>{{ d[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% elif msg %}
+<h3>{{ msg }}</h3>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,137 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    color: #8a56c1;
+    letter-spacing: 1px;
+
+    /* Animation for heading */
+    animation: headingGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes headingGlow {
+    0% {
+        color: #8a56c1;
+        text-shadow: 0 0 5px rgba(156,108,255,0.4);
+        transform: scale(1);
+    }
+    50% {
+        color: #6f38c5;
+        text-shadow: 0 0 15px rgba(156,108,255,0.7);
+        transform: scale(1.05);
+    }
+    100% {
+        color: #8a56c1;
+        text-shadow: 0 0 5px rgba(156,108,255,0.4);
+        transform: scale(1);
+    }
+}
+
+/* === Subheading === */
+h2 {
+    text-align: center;
+    color: #6f38c5;
+    margin-bottom: 10px;
+}
+
+/* === Details View Boxes === */
+h3 {
+    margin: 10px 0 5px 0;
+    color: #5a2aab;
+    animation: boxGlow 1.5s ease-in-out infinite alternate; /* heading glow animation */
+}
+
+p {
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-bottom: 12px;
+    line-height: 1.4;
+    transition: 0.3s;
+    animation: glowPulse 1s infinite alternate; /* box float & glow */
+}
+
+p:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(156,108,255,0.25);
+}
+
+/* === Forms for Edit/Delete buttons === */
+form {
+    display: inline-block;
+    margin-right: 10px;
+    animation: buttonPulse 1s infinite alternate; /* subtle button animation */
+}
+
+button {
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    color: white;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(156,108,255,0.6);
+}
+
+/* === Glow & Float Animations === */
+@keyframes glowPulse {
+    0% { box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(0); }
+    50% { box-shadow: 0 5px 25px rgba(156,108,255,0.3); transform: translateY(-1px); }
+    100% { box-shadow: 0 4px 20px rgba(0,0,0,0.08); transform: translateY(0); }
+}
+
+@keyframes boxGlow {
+    0% { color: #5a2aab; text-shadow: 0 0 3px rgba(156,108,255,0.3); transform: scale(1); }
+    50% { color: #6f38c5; text-shadow: 0 0 10px rgba(156,108,255,0.5); transform: scale(1.02); }
+    100% { color: #5a2aab; text-shadow: 0 0 3px rgba(156,108,255,0.3); transform: scale(1); }
+}
+
+@keyframes buttonPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* === Responsive Adjustment === */
+@media screen and (max-width: 500px) {
+    h1, h2 {
+        font-size: 18px;
+    }
+
+    h3 {
+        font-size: 15px;
+    }
+
+    p {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+
+    button {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    form {
+        display: block;
+        margin-bottom: 8px;
+    }
+}

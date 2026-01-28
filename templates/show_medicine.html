@@ -1,0 +1,38 @@
+{% extends 'show_medicine_temp.html' %}
+{% block m1 %}
+<link href="../static/css/show_medicine.css" type="text/css" rel="stylesheet"/>
+<h1>ALL MEDICINE</h1>
+<a href="medical_home"><h2>Back</h2></a>
+{% if project %}
+         <h2>DETAILS VIEW </h2>
+               {% for d in project %}
+                  <h3>{{d[0]}}</h3>
+                  <p>
+                      medicine_name:{{d[1]}}<br/>
+                      medicine_type:{{d[2]}}<br/>
+                      company_name:{{d[3]}}<br/>
+                      unit_price:{{d[4]}}<br/>
+                      description:{{d[5]}}<br/>
+                      medical_email:{{d[6]}}
+                  </p>
+                      <form method="post" action="edit_medicine">
+                        <input type="hidden" value="{{d[0]}}" name="M1"/>
+                       <button type="submit">EDIT</button>
+                      </form>
+                       <form method="post" action="delete_medicine">
+                        <input type="hidden" value="{{d[0]}}" name="D1"/>
+                       <button type="submit">Delete</button>
+                       </form>
+                      {% endfor %}
+{% elif msg %}
+     <h3>{{msg}}</h3>
+{% endif %}
+                           {% endblock %}
+
+
+
+
+
+
+
+

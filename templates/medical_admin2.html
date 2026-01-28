@@ -1,0 +1,30 @@
+{% extends 'show_medical_temp.html' %}
+{% block m1 %}
+<link href="../static/css/medical_show.css" type="text/css" rel="stylesheet"/>
+<h1>ALL MEDICALS</h1>
+{% if project %}
+     <h2>DETAILS VIEW</h2>
+      {% for d in project %}
+          <h3>{{d[0]}}</h3>
+          <p>
+              owner_name:{{d[1]}} <br/>
+              address:{{d[2]}}<br/>
+              contact:{{d[3]}}<br/>
+              licence_no:{{d[4]}}<br/>
+              email:{{d[5]}}
+
+          </p>
+<form method="post" action="edit_medical">
+    <input type="hidden" value="{{d[5]}}" name="H1"/>
+    <button type="submit">EDIT</button>
+</form>
+
+<form method="post" action="delete_medical">
+    <input type="hidden" value="{{d[5]}}" name="T1"/>
+    <button type="submit">Delete</button>
+</form>
+      {% endfor %}
+{% elif msg %}
+     <h3>{{msg}}</h3>
+{% endif %}
+{% endblock %}

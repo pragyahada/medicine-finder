@@ -1,0 +1,119 @@
+{% extends 'admin_reg_temp.html' %}
+{% block m1 %}
+
+<!-- Link to CSS (optional if already included in layout) -->
+<link href="../static/css/adminreg.css" type="text/css" rel="stylesheet"/>
+
+<!-- Page Heading -->
+<h1>Admin Registration</h1>
+
+<!-- Container for Registration Form -->
+<div class="admin-container">
+    <form method="post" action="admin_reg" onsubmit="return A()">
+        <p>Name:
+            <input type="text" name="T1" id="txt1"><span id="sp1"></span>
+        </p>
+        <p>Address:
+            <input type="text" name="T2" id="txt2"><span id="sp2"></span>
+        </p>
+        <p>Contact:
+            <input type="text" name="T3" id="txt3"><span id="sp3"></span>
+        </p>
+        <p>Email:
+            <input type="text" name="T4" onkeyup="B()" id="txt4"><span id="sp4"></span>
+        </p>
+        <p>Password:
+            <input type="text" name="T5" id="txt5"><span id="sp5"></span>
+        </p>
+        <p>Confirm Password:
+            <input type="text" name="T6" id="txt6"><span id="sp6"></span>
+        </p>
+
+        <p>
+            <input type="submit" name="B1" id="Btn1" value="Register">
+        </p>
+    </form>
+
+    {% if project %}
+        <h3>{{project}}</h3>
+    {% endif %}
+</div>
+
+<!-- Validation Script -->
+<script>
+function B() {
+    let t4 = document.getElementById("txt4");
+    let s4 = document.getElementById("sp4");
+    let v4 = t4.value;
+
+    let pat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    let ans = pat.test(v4);
+    if (ans) {
+        s4.innerHTML = "";
+    } else {
+        s4.innerHTML = "Enter valid Email Id";
+    }
+}
+
+function A() {
+    var t1 = document.getElementById("txt1");
+    var t2 = document.getElementById("txt2");
+    var t3 = document.getElementById("txt3");
+    var t4 = document.getElementById("txt4");
+    var t5 = document.getElementById("txt5");
+    var t6 = document.getElementById("txt6");
+
+    var e1 = document.getElementById("sp1");
+    var e2 = document.getElementById("sp2");
+    var e3 = document.getElementById("sp3");
+    var e4 = document.getElementById("sp4");
+    var e5 = document.getElementById("sp5");
+    var e6 = document.getElementById("sp6");
+
+    var v1 = t1.value;
+    var v2 = t2.value;
+    var v3 = t3.value;
+    var v4 = t4.value;
+    var v5 = t5.value;
+    var v6 = t6.value;
+
+    e1.innerHTML = "";
+    e2.innerHTML = "";
+    e3.innerHTML = "";
+    e4.innerHTML = "";
+    e5.innerHTML = "";
+    e6.innerHTML = "";
+
+    if (!v1) {
+        e1.innerHTML = "Enter Name";
+        t1.focus(); return false;
+    } else if (!check_alpha(v1)) {
+        e1.innerHTML = "Only Alphabets";
+        t1.select(); return false;
+    } else if (!v2) { e2.innerHTML="Enter Address"; t2.focus(); return false; }
+    else if (!v3) { e3.innerHTML="Enter Contact"; t3.focus(); return false; }
+    else if (!check_contact(v3)) { e3.innerHTML="Only numbers, must be 10 digits starting with 6-9"; t3.focus(); return false; }
+    else if (!v4) { e4.innerHTML="Enter Email"; t4.focus(); return false; }
+    else if (!v5) { e5.innerHTML="Enter Password"; t5.focus(); return false; }
+    else if (!v6) { e6.innerHTML="Enter Confirm Password"; t6.focus(); return false; }
+    else if (!match_password(v5,v6)) { t5.value=""; t6.value=""; e5.innerHTML="Password not matched"; t5.focus(); return false; }
+}
+
+function check_alpha(name) {
+    for (let i=0;i<name.length;i++){
+        let ch=name.charAt(i);
+        if (!((ch>='A' && ch<='Z')||(ch>='a' && ch<='z')||ch===' ')) return false;
+    }
+    return true;
+}
+
+function check_contact(number){
+    if(number.length!==10) return false;
+    if(number.charAt(0)<'6') return false;
+    return /^\d{10}$/.test(number);
+}
+
+function match_password(p1,p2){ return p1===p2; }
+</script>
+
+{% endblock %}

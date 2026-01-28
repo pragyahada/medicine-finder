@@ -1,0 +1,8 @@
+{% extends 'uploadAdminPhoto_temp.html'%}
+{% block m1%}
+<h1>Photo upload</h1>
+<form method="post" action="adminphoto1" enctype="multipart/form-data">
+    file:<input type="file" name="F1"/><br/><br/>
+    <input type="submit" name="B1" value="Upload"/>
+</form>
+{% endblock %}

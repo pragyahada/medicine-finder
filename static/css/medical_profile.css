@@ -1,0 +1,93 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin: 0 0 15px 0;
+    color: #8a56c1;
+}
+
+/* === Profile Container (No Animation) === */
+.profile-container {
+    width: 450px;
+    max-width: 90%;
+    padding: 12px 18px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c8a0ff;
+    text-align: center;
+    margin: 0 auto 20px auto;
+}
+
+/* === Paragraphs / Inputs === */
+.profile-container p {
+    margin: 8px 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.profile-container input[type="text"] {
+    width: 100%;
+    padding: 5px 8px;
+    border-radius: 8px;
+    border: 1px solid #c8a0ff;
+    font-size: 14px;
+    margin-top: 4px;
+    transition: 0.3s;
+}
+
+.profile-container input[type="text"]:focus {
+    border-color: #9c6cff;
+    box-shadow: 0 0 5px rgba(156, 108, 255, 0.5);
+    outline: none;
+}
+
+.profile-container input[readonly] {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+/* === Buttons & Links === */
+.profile-container button,
+.profile-container a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    padding: 8px 18px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.profile-container button:hover,
+.profile-container a:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-1px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(156, 108, 255, 0.6);
+}
+
+/* === Home Link Spacing === */
+.profile-container h2 {
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* === Message Styling === */
+.profile-container h3 {
+    text-align: center;
+    color: #e74c3c;
+    margin: 8px 0;
+}

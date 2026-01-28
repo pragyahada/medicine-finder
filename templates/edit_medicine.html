@@ -1,0 +1,44 @@
+{% extends 'edit_medicine_temp.html' %}
+{% block m1 %}
+<link href="../static/css/edit_medicine.css" type="text/css" rel="stylesheet"/>
+
+<h1 class="page-heading">EDIT AND SAVE</h1>
+
+{% if project %}
+<div class="form-back-container">
+    <form method="post" action="edit_medicine1">
+        <p>
+            medicine_name:
+            <input type="text" name="T1" id="Txt1" value="{{project[1]}}">
+        </p>
+        <p>
+            medicine_type:
+            <input type="text" name="T2" id="Txt2" value="{{project[2]}}">
+        </p>
+        <p>
+            company_name:
+            <input type="text" name="T3" id="Txt3" value="{{project[3]}}">
+        </p>
+        <p>
+            unit_price:
+            <input type="text" name="T4" id="Txt4" value="{{project[4]}}">
+        </p>
+        <p>
+            description:
+            <input type="text" name="T5" id="Txt5" value="{{project[5]}}">
+        </p>
+        <p>
+            med_id:
+            <input type="text" name="T6" id="Txt6" value="{{project[0]}}" readonly>
+        </p>
+
+        <p>
+            <button>save changes</button>
+        </p>
+    </form>
+</div>
+{% endif %}
+
+<h3><a href="show_medicine">Back</a></h3>
+
+{% endblock %}

@@ -1,0 +1,99 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9; /* soft medical-themed background */
+    margin: 0;
+    height: 100vh; /* full viewport height */
+    position: relative;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin-bottom: 15px; /* small gap between heading and container */
+    color: #8a56c1; /* soft purple */
+    text-transform: capitalize;
+}
+
+/* === Password Container === */
+.pass-container {
+    width: 450px;
+    max-width: 90%;
+    padding: 20px 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    border: 1px solid #c8a0ff;
+    text-align: center;
+    display: inline-block;
+
+    /* Center horizontally & vertically below heading */
+    position: absolute;
+    top: 55%; /* slightly lower to allow heading space */
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* === Paragraphs & Input Fields === */
+.pass-container p {
+    margin: 12px 0;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.pass-container input[type="text"] {
+    width: 100%;
+    padding: 7px 10px;
+    border-radius: 8px;
+    border: 1px solid #c8a0ff;
+    font-size: 14px;
+    margin-top: 5px;
+    transition: 0.3s;
+}
+
+.pass-container input[type="text"]:focus {
+    border-color: #9c6cff;
+    box-shadow: 0 0 8px rgba(156, 108, 255, 0.4);
+    outline: none;
+}
+
+/* === Buttons & Links === */
+.pass-container input[type="submit"],
+.pass-container button,
+.pass-container a {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    padding: 9px 22px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pass-container input[type="submit"]:hover,
+.pass-container button:hover,
+.pass-container a:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 6px 20px rgba(156, 108, 255, 0.6);
+}
+
+/* === Messages === */
+.pass-container h3 {
+    color: #555;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* === Center Home link inside container === */
+.pass-container h2,
+.pass-container a {
+    text-align: center;
+    margin-top: 20px;
+}

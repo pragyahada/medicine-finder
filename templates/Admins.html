@@ -1,0 +1,27 @@
+{% extends 'show_admins_temp.html' %}
+{% block m1 %}
+<link href="../static/css/show_admins.css" type="text/css" rel="stylesheet"/>
+<h1>ALL Admins</h1>
+
+{% if project %}
+    <h2>Tabular view</h2>
+    <table width="90%" border="2">
+        <tr>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Email</th>
+        </tr>
+        {% for d in project %}
+            <tr>
+                <td>{{d[0]}}</td>
+                <td>{{d[1]}}</td>
+                <td>{{d[2]}}</td>
+                <td>{{d[3]}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% elif msg %}
+    <h3>{{msg}}</h3>
+{% endif %}
+{% endblock %}

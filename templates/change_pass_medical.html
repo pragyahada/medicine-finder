@@ -1,0 +1,33 @@
+{% extends 'change_pass_medical_temp.html' %}
+{% block m1 %}
+<link href="../static/css/change_pass_medical.css" type="text/css" rel="stylesheet"/>
+
+<h1>Password Change</h1>
+
+<div class="pass-container">
+    <form method="post" action="change_pass_medical">
+        <p>Old Password:
+            <input type="password" name="T1" id="Txt1">
+        </p>
+        <p>New Password:
+            <input type="password" name="T2" id="Txt2">
+        </p>
+        <p>Confirm Password:
+            <input type="password" name="T3" id="Txt3">
+        </p>
+        <p>
+            <input type="submit" name="B1" id="Btn1" value="Change">
+        </p>
+    </form>
+
+    {% if msg %}
+        <h3>{{ msg }}</h3>
+    {% endif %}
+
+    <div class="buttons">
+        <a href="medical_home" class="animated-btn">Home</a>
+        <a href="javascript:history.back()" class="animated-btn">Back</a>
+    </div>
+</div>
+
+{% endblock %}

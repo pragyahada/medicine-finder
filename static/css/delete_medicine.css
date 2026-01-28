@@ -1,0 +1,78 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #8a56c1;
+}
+
+/* === Container Box === */
+.admin-container {
+    width: 400px;
+    max-width: 90%;
+    padding: 12px 15px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    border: 1px solid #c8a0ff;
+    margin: 0 auto 20px auto;
+}
+
+/* === Paragraph / Details === */
+.admin-container p {
+    color: #333;
+    line-height: 1.4;
+    margin: 5px 0 15px 0;
+}
+
+/* === Buttons === */
+.admin-container button,
+.admin-container a button {
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    padding: 6px 14px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 5px 5px 0 5px;
+    font-weight: bold;
+    font-size: 13px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Button hover */
+.admin-container button:hover,
+.admin-container a button:hover {
+    background: linear-gradient(135deg, #9c6cff, #6f38c5);
+    box-shadow: 0 6px 20px rgba(156,108,255,0.6);
+    transform: scale(1.03);
+}
+
+/* === Responsive adjustments === */
+@media screen and (max-width: 500px) {
+    .admin-container {
+        padding: 10px;
+        width: 95%;
+    }
+
+    .admin-container button,
+    .admin-container a button {
+        font-size: 12px;
+        padding: 5px 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+}

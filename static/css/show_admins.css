@@ -1,0 +1,86 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9; /* soft pastel medical background */
+    margin: 0;
+    padding: 0;
+}
+
+/* === Main Heading === */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #8a56c1; /* soft purple */
+}
+
+/* === Subheading === */
+h2 {
+    text-align: center;
+    color: #9c6cff;
+    margin-bottom: 25px;
+}
+
+/* === Table Container === */
+table {
+    width: 90%;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #c8a0ff;
+    box-shadow: 0 0 15px rgba(156, 108, 255, 0.15);
+}
+
+/* === Table Header === */
+table th {
+    background: linear-gradient(135deg, #b388ff, #8a56c1);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+    border: 1px solid #c8a0ff;
+    letter-spacing: 0.5px;
+}
+
+/* === Table Cells === */
+table td {
+    padding: 10px 15px;
+    text-align: left;
+    border: 1px solid #e3d2ff;
+    color: #333;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* === Alternate Rows === */
+table tr:nth-child(even) {
+    background-color: #f7f2ff;
+}
+
+/* === Hover Effect for Rows === */
+table tr:hover {
+    background-color: #ede4ff;
+    transform: scale(1.01);
+    box-shadow: 0 0 10px rgba(156,108,255,0.3);
+}
+
+/* === Message Text (If No Data) === */
+h3 {
+    text-align: center;
+    color: #6f38c5;
+    margin-top: 40px;
+}
+
+/* === Responsive Adjustments === */
+@media screen and (max-width: 600px) {
+    table {
+        width: 95%;
+        font-size: 13px;
+    }
+
+    table th, table td {
+        padding: 8px;
+    }
+}

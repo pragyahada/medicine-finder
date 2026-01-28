@@ -1,0 +1,88 @@
+/* === Body === */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* === Page Heading === */
+h1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    color: #8a56c1;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    animation: heading3D 3s ease-in-out infinite alternate;
+    transform-style: preserve-3d;
+}
+
+/* 3D Animation only for heading */
+@keyframes heading3D {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) scale(1);
+        text-shadow:
+            1px 1px 0 #cdb5ff,
+            2px 2px 3px rgba(0,0,0,0.2);
+    }
+    50% {
+        transform: rotateX(15deg) rotateY(10deg) scale(1.05);
+        text-shadow:
+            2px 2px 5px rgba(0,0,0,0.3),
+            0 0 10px #c5a3ff;
+    }
+    100% {
+        transform: rotateX(-10deg) rotateY(-10deg) scale(1);
+        text-shadow:
+            1px 1px 0 #e0caff,
+            2px 2px 5px rgba(0,0,0,0.25);
+    }
+}
+
+/* === Table Styling === */
+table {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+th, td {
+    padding: 12px 10px;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+th {
+    background: linear-gradient(135deg, #e9d9ff, #ffffff);
+    color: #6f38c5;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background: linear-gradient(135deg, #f3e5ff, #e0d1ff);
+    transform: scale(1.01);
+    transition: 0.3s;
+}
+
+/* === Responsive adjustments === */
+@media screen and (max-width: 600px) {
+    table, th, td {
+        font-size: 12px;
+        padding: 8px 5px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,73 @@
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f9; /* soft page background */
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #8a56c1; /* soft purple heading */
+}
+
+/* Admin container box */
+.admin-container {
+    width: 450px;
+    margin: 0 auto 50px auto;
+    padding: 30px 25px;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #e9d9ff, #ffffff); /* soft purple-white gradient */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #c8a0ff; /* subtle purple border */
+}
+
+/* Hover effect on container */
+.admin-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Text inside container (keep current colors) */
+.admin-container h3,
+.admin-container p {
+    color: inherit; /* preserve current text color */
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+/* Links styled as buttons */
+.admin-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #b388ff; /* light purple button */
+    padding: 8px 20px;
+    border-radius: 8px;
+    display: inline-block;
+    margin: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-container a:hover {
+    background-color: #9c6cff; /* darker purple on hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 12px rgba(156, 108, 255, 0.5);
+}
+
+/* Admin photo styling */
+.admin-container img {
+    display: block;
+    margin: 0 auto 15px auto;
+    border-radius: 50%;
+    border: 2px solid #b388ff; /* border matches button color */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.admin-container img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #9c6cff;
+}

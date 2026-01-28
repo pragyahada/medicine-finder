@@ -1,0 +1,24 @@
+<h1>Delete</h1>
+<link href="../static/css/delete_medical.css" type="text/css" rel="stylesheet"/>
+
+{% if project %}
+<div class="admin-container">
+    <h3>{{project[0]}}</h3>
+    <p>
+        owner_name: {{project[1]}}<br/>
+        address: {{project[2]}}<br/>
+        contact: {{project[3]}}<br/>
+        licence_no: {{project[4]}}<br/>
+        email: {{project[5]}}<br/>
+    </p>
+
+    <form onsubmit="return confirm('Are you sure to delete?')" method="post" action="delete_medical1">
+        <input type="hidden" value="{{project[5]}}" name="T1"/>
+        <button type="submit">Delete</button>
+    </form>
+
+    <a href="show_medical">
+        <button type="button">Continue</button>
+    </a>
+</div>
+{% endif %}
