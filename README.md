@@ -88,19 +88,22 @@ project/
 
 ⚙️ Installation & Setup
 1️⃣ Clone the Repository
+```
 git clone https://github.com/your-username/medical-store-flask.git
 cd medical-store-flask
-
+```
 2️⃣ Create Virtual Environment (Optional)
+```
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
-
+```
 3️⃣ Install Dependencies
+```
 pip install flask pymysql werkzeug
-
+```
 4️⃣ Configure Database
-
+```
 Create a MySQL database
 
 Create required tables:
@@ -116,8 +119,9 @@ medicinedata
 photodata
 
 Update database connection in MyLib.py
-
+```
 ▶️ Run the Application
+```
 python app.py
 
 
